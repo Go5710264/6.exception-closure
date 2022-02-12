@@ -1,20 +1,20 @@
 // Задача 1
 
-// function parseCount(parse) {
-//     let numberPerLine = Number.parseInt(parse);
-//     if(Number.isNaN(numberPerLine)) {
-//         throw new Error('Невалидное значение');
-//     }
-//     return numberPerLine;
-// }
+function parseCount(parse) {
+    let numberPerLine = Number.parseInt(parse);
+    if(Number.isNaN(numberPerLine)) {
+        throw new Error('Невалидное значение');
+    }
+    return numberPerLine;
+}
 
-// function validateCount(parse) {
-//     try {
-//         return parseCount(parse);
-//     } catch (err) {
-//         return err;
-//     }
-// }
+function validateCount(parse) {
+    try {
+        return parseCount(parse);
+    } catch (err) {
+        return err;
+    }
+}
 
 // Задача 2
 

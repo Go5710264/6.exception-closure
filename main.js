@@ -1,9 +1,9 @@
 // Задача 1
 
-// console.log(validateCount("115px"));
-// console.log(validateCount("px115"));
-// console.log(validateCount(NaN));
-// console.log(validateCount(404));
+console.log(validateCount("115px"));
+console.log(validateCount("px115"));
+console.log(validateCount(NaN));
+console.log(validateCount(404));
 
 // Задача 2
 
