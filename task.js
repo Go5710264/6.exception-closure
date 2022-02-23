@@ -23,7 +23,7 @@ class Triangle{
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-        if ((this.sideA + this.sideB) < this.sideC || (this.sideB + this.sideC) < this.sideA || (this.sideC + this.sideA) < this.sideB) {
+        if ((sideA + sideB) < sideC || (sideB + sideC) < sideA || (sideC + sideA) < sideB) {
             throw new Error('Треугольник с такими сторонами не существует');
         }
     }
@@ -35,13 +35,16 @@ class Triangle{
     getArea(){
         let semiPerimeter = this.getPerimeter() / 2;
         let area = Math.sqrt(semiPerimeter * (semiPerimeter - this.sideA) * (semiPerimeter - this.sideB) * (semiPerimeter - this.sideC));   
-        return area.toFixed(3);
+        return +area.toFixed(3);
     }
 }
 function getTriangle(sideA, sideB, sideC) {
     try {
         return new Triangle(sideA, sideB, sideC);
     } catch (err) {
-        return [getArea(), getPerimeter()]
+        return err;
+        //return {getArea(), getPerimeter()}
+    } finally {
+        Triangle.getPerimeter();
     }
 }

@@ -11,4 +11,4 @@ let newTriangle = new Triangle(5, 6, 7);
 console.log(newTriangle.getPerimeter());
 console.log(newTriangle.getArea());
 getTriangle(10, 15, 20);
-getTriangle(10, 9, 1);
+const triangle = getTriangle(1,3,100);
