@@ -29,11 +29,7 @@ class Triangle{
     }
 
     getPerimeter(){
-        try {
-            return this.sideA + this.sideB + this.sideC;
-        } catch (err) {
-            throw Error;  
-        }
+        return this.sideA + this.sideB + this.sideC;
     }
 
     getArea(){
@@ -47,7 +43,19 @@ function getTriangle(sideA, sideB, sideC) {
     try {
         return new Triangle(sideA, sideB, sideC);
     } catch (err) {
-        newTriangle3.getArea()
-        this.getPerimeter();
+        return console.log(wrongFigure);
     }
 }
+
+let wrongFigure = {
+    getArea: 'Ошибка! Треугольник не существует',
+    getPerimeter: 'Ошибка! Треугольник не существует'
+}
+// let wrongFigure = {
+//     getArea() {
+//         console.log('Данного треугольника не существует!');
+//     },
+//     getPerimeter() {
+//         console.log('Данного треугольника не существует!');
+//     },
+// }
