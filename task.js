@@ -38,13 +38,29 @@ class Triangle{
         return +area.toFixed(3);
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f495644bd09b5b45d92dbecff22a4542e4d5a544
 function getTriangle(sideA, sideB, sideC) {
     try {
         return new Triangle(sideA, sideB, sideC);
     } catch (err) {
+<<<<<<< HEAD
         return err;
         //return {getArea(), getPerimeter()}
     } finally {
         Triangle.getPerimeter();
+=======
+        let wrongFigure = {
+            getArea() {
+                return 'Ошибка! Треугольник не существует';
+            },
+            getPerimeter() {
+                return 'Ошибкa! Треугольник не существует';
+            }
+        };
+        return wrongFigure;
+>>>>>>> f495644bd09b5b45d92dbecff22a4542e4d5a544
     }
 }
