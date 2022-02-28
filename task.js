@@ -43,19 +43,14 @@ function getTriangle(sideA, sideB, sideC) {
     try {
         return new Triangle(sideA, sideB, sideC);
     } catch (err) {
-        return console.log(wrongFigure);
+        let wrongFigure = {
+            getArea() {
+                return 'Ошибка! Треугольник не существует';
+            },
+            getPerimeter() {
+                return 'Ошибка! Треугольник не существует';
+            }
+        };
+        return wrongFigure;
     }
 }
-
-let wrongFigure = {
-    getArea: 'Ошибка! Треугольник не существует',
-    getPerimeter: 'Ошибка! Треугольник не существует'
-}
-// let wrongFigure = {
-//     getArea() {
-//         console.log('Данного треугольника не существует!');
-//     },
-//     getPerimeter() {
-//         console.log('Данного треугольника не существует!');
-//     },
-// }
